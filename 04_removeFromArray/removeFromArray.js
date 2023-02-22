@@ -1,13 +1,5 @@
 const removeFromArray = function (array, ...values) {
-    for (value of values) {
-        index = array.indexOf(value);
-        // indexOf returns -1 if the value is not found in the array.
-        if (index >= 0) {
-            array.splice(index, 1);
-        }
-    }
-
-    return array;
+    return array.filter((item) => !(values.includes(item)));
 };
 
 // Do not edit below this line
